@@ -1,0 +1,32 @@
+# Local runs, downloads, caches, and environments; retain input/result JSON.
+/runs/
+/models/
+/checkpoints/
+/downloads/
+/data/crop/
+/data/images/
+/data/crop.zip
+/data/external/
+/.cache/
+/.venv/
+/.venv-*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+*.log
+*.pid
+*.tmp
+.env
+.env.*
+
+# Never commit generated media or model/evaluator weights.
+*.mp4
+*.webm
+*.mov
+*.safetensors
+*.ckpt
+*.pth
+*.pt
+*.bin
+*.zip
