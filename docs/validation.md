@@ -21,7 +21,14 @@ Historical full runs and new portable-runner validation are distinct evidence.
   filesystem mapping, result persistence, and hash-based invalidation.
 - Real I2V NVFP4 one-video generation passed using the new runner on NVIDIA B200,
   with the historical environment: 832 × 480, 81 frames, 16 fps, 40 steps, seed 0.
-- New-runner T2V GPU smoke status is recorded below after completion.
+- Real T2V NVFP4 one-video generation also passed using the new runner on NVIDIA
+  B200 with the historical environment: 1280 × 720, 81 frames, 16 fps, 40 steps,
+  seed 42, CFG 4.0/3.0. Both real smoke workers exited 0; generated video hashes,
+  per-video metadata fingerprints, and decoded formats passed the runner checks.
+- A partial I2V smoke root containing one of 355 videos was correctly rejected by
+  full verification (354 missing), preventing smoke output from being reported as
+  a complete benchmark. Environment capture also resolved the pinned Omni source
+  and Torch 2.14.0+cu130 correctly in the historical overlay.
 
 Not validated: a clean environment bootstrap, a fresh full 1,560-video generation
 through the new runner, a full new-runner score reproduction, alternate GPUs,
